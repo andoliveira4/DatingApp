@@ -1,0 +1,63 @@
+Angular
+{
+	ng serve
+}
+
+dotnet --info //pega info dos sdks instalados
+dotnet -h //help 
+
+dotnet new -n Datting.API
+dotnet watch run //roda a aplicação sem ter que ficar rodando toda hora
+
+dotnet ef migrations add AddedUserEntity
+dotnet ef database update //roda o migration
+
+Nuget
+{
+
+	Microsoft.IdentityModel.Tokens
+	System.IdentityModel.Tokens.Jwt
+	Microsoft.AspNetCore.Authentication.JwtBearer
+}
+
+vscode{
+
+	Ctrl+Shift+P Command Palette
+	Ctrl+. mostra a solução dos erros
+	Ctrl+P Busca o arquivo que vc quer
+	
+	plugins
+	{
+		c# //by ominisharp
+		c# extentions //by jchannon
+		nuget package manager //by jmrog		
+	}	
+}
+
+
+tirar pastas inuteis do vscode 
+{
+
+	File>Preferences>Settings>Search for exclude
+	No Menu Clique em "Text Editor" e em "Files"
+	clique no botao add pattern e escreva **/obj
+	clique no botao add pattern e escreva **/bin
+	
+}
+
+
+sites
+{
+	open rash
+	https://md5decrypt.net/en/Sha512/
+	https://jwt.io/ (abre o token jwt)
+}
+
+
+
+Patters usados
+{
+
+	Repository Pattern
+
+}
