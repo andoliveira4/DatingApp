@@ -25,6 +25,7 @@ vscode{
 	Ctrl+Shift+P Command Palette
 	Ctrl+. mostra a solução dos erros
 	Ctrl+P Busca o arquivo que vc quer
+	Alt+Shift+F Formata o codigo
 	
 	plugins
 	{
