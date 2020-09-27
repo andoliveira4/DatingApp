@@ -3,6 +3,11 @@ Angular
 	ng serve
 }
 
+Libraries
+{
+	npm install alertfyjs
+}
+
 dotnet --info //pega info dos sdks instalados
 dotnet -h //help 
 
