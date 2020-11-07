@@ -67,3 +67,13 @@ Patters usados
 	Repository Pattern
 
 }
+
+
+Adicionais
+{
+	https://alertifyjs.com/ - (SPA) Criar popupscoloridos para mensagens de sucesso, erro e alertas
+	https://github.com/auth0/angular2-jwt - (SPA) Valida tokens jwt dentro do SPA (npm install @auth0/angular-jwt)
+	https://valor-software.com/ngx-bootstrap/#/ - (SPA) ajuda a importar coisas do bootstrap como dropwdowslist (npm install ngx-bootstrap@3.0.1 --save)
+	https://bootswatch.com/help/ - (SPA) Temas - npm install bootswatch
+	
+}
