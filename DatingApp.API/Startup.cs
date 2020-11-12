@@ -19,6 +19,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using DatingApp.API.Helpers;
+using AutoMapper;
 
 namespace DatingApp.API
 {
@@ -36,9 +37,19 @@ namespace DatingApp.API
         {
             //a ordem aqui n importa
             services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddControllers();
+            //services.AddControllers();
+            {
+                //*era igual acima mas foi alterado para colocar o newtonsoft
+                //services.AddControllers();
+                services.AddControllers().AddNewtonsoftJson(opt =>
+                {
+                    opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                });
+            }
             services.AddCors();
+            services.AddAutoMapper(typeof(DatingRepository).Assembly);
             services.AddScoped<IAuthRepository, AuthRepository>(); //diferente do addsingleton que é linear e serve para quando nao usa task e o addtransient que é para aplicações pequenos o addscoped é bom para task pq ele usa esta linha para cada requisicao
+            services.AddScoped<IDatingRepository, DatingRepository>(); 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme) //habilita autenticação
                     .AddJwtBearer(options => { options.TokenValidationParameters = new TokenValidationParameters
                     {
